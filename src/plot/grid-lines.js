@@ -42,6 +42,8 @@ const propTypes = {
   top: React.PropTypes.number,
   left: React.PropTypes.number,
 
+  style: React.PropTypes.object,
+
   tickValues: React.PropTypes.array,
   tickTotal: React.PropTypes.number,
 
@@ -109,6 +111,7 @@ class GridLines extends PureRenderComponent {
       direction,
       width,
       height,
+      style,
       tickTotal,
       tickValues,
       top,
@@ -138,7 +141,8 @@ class GridLines extends PureRenderComponent {
             <line
               {...pathProps}
               key={i}
-              className="rv-xy-plot__grid-lines__line" />
+              className="rv-xy-plot__grid-lines__line" 
+              style={style} />
           );
         })}
       </g>

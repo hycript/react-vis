@@ -41,6 +41,9 @@ export default class Example extends React.Component {
         <YAxis />
         <LineMarkSeries
           className="linemark-series-example"
+          style={{
+            stroke: 'white'
+          }}
           data={[
             {x: 1, y: 10},
             {x: 2, y: 5},

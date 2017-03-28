@@ -65,6 +65,7 @@ class BarSeries extends AbstractSeries {
       lineSizeAttr,
       marginLeft,
       marginTop,
+      style,
       valuePosAttr,
       valueSizeAttr
     } = this.props;
@@ -102,6 +103,7 @@ class BarSeries extends AbstractSeries {
         {data.map((d, i) => {
           const attrs = {
             style: {
+              ...style,
               opacity: opacityFunctor && opacityFunctor(d),
               stroke: strokeFunctor && strokeFunctor(d),
               fill: fillFunctor && fillFunctor(d)

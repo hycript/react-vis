@@ -32,7 +32,13 @@ const DEFAULT_STROKE_WIDTH = 1;
 class MarkSeries extends AbstractSeries {
 
   render() {
+<<<<<<< e606c0c068643620d0049e6b662171bba69ef639
     const {animation, className, data, marginLeft, marginTop, strokeWidth} = this.props;
+=======
+    const {
+      animation, className, data, marginLeft, marginTop, style
+    } = this.props;
+>>>>>>> adding a style property
     if (!data) {
       return null;
     }
@@ -63,6 +69,7 @@ class MarkSeries extends AbstractSeries {
             cx: xFunctor(d),
             cy: yFunctor(d),
             style: {
+              ...style,
               opacity: opacityFunctor ? opacityFunctor(d) : DEFAULT_OPACITY,
               stroke: strokeFunctor && strokeFunctor(d),
               fill: fillFunctor && fillFunctor(d),
