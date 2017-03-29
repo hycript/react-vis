@@ -69,11 +69,14 @@ class MarkSeries extends AbstractSeries {
             cx: xFunctor(d),
             cy: yFunctor(d),
             style: {
-              ...style,
               opacity: opacityFunctor ? opacityFunctor(d) : DEFAULT_OPACITY,
               stroke: strokeFunctor && strokeFunctor(d),
               fill: fillFunctor && fillFunctor(d),
+<<<<<<< 21ed372442181336e3c0a3a77db782c3995c9c9e
               strokeWidth: strokeWidth || DEFAULT_STROKE_WIDTH
+=======
+              ...style
+>>>>>>> add style for composite components (ie hint, axes)
             },
             key: i,
             onClick: e => this._valueClickHandler(d, e),

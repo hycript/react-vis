@@ -77,10 +77,10 @@ class AreaSeries extends AbstractSeries {
         onMouseOut={this._seriesMouseOutHandler}
         onClick={this._seriesClickHandler}
         style={{
-          ...style,
           opacity,
           stroke,
-          fill
+          fill,
+          ...style
         }}/>
     );
   }

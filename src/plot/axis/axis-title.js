@@ -65,10 +65,11 @@ const propTypes = {
   orientation: React.PropTypes.oneOf([
     LEFT, RIGHT, TOP, BOTTOM
   ]).isRequired,
+  style: React.PropTypes.object,
   title: React.PropTypes.string.isRequired
 };
 
-function AxisTitle({orientation, width, height, title}) {
+function AxisTitle({orientation, width, height, style, title}) {
   const outerGroupTranslateX = orientation === LEFT ? width : 0;
   const outerGroupTranslateY = orientation === TOP ? height : 0;
   const outerGroupTransform = `translate(${outerGroupTranslateX}, ${outerGroupTranslateY})`;
@@ -77,7 +78,7 @@ function AxisTitle({orientation, width, height, title}) {
 
   return (
     <g transform={outerGroupTransform} className="rv-xy-plot__axis__title">
-      <g style={{textAnchor}} transform={innerGroupTransform}>
+      <g style={{...textAnchor, ...style}} transform={innerGroupTransform}>
         <text>{title}</text>
       </g>
     </g>

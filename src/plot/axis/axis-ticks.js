@@ -28,6 +28,7 @@ const {LEFT, RIGHT, TOP, BOTTOM} = ORIENTATION;
 const propTypes = {
   width: React.PropTypes.number.isRequired,
   height: React.PropTypes.number.isRequired,
+  style: React.PropTypes.object,
   orientation: React.PropTypes.oneOf([
     LEFT, RIGHT, TOP, BOTTOM
   ]).isRequired
@@ -149,6 +150,7 @@ class AxisTicks extends React.Component {
       orientation,
       width,
       height,
+      style = {},
       tickFormat,
       tickTotal,
       tickValues
@@ -171,9 +173,17 @@ class AxisTicks extends React.Component {
       const text = tickFormatFn(v);
 
       return (
-        <g key={i} {...translateFn(pos, 0)} className="rv-xy-plot__axis__tick">
-          <line {...pathProps} className="rv-xy-plot__axis__tick__line"/>
-          <text {...textProps} className="rv-xy-plot__axis__tick__text">
+        <g key={i} {...translateFn(pos, 0)}
+        className="rv-xy-plot__axis__tick"
+        style={style}>
+          <line {...pathProps}
+            className="rv-xy-plot__axis__tick__line"
+            style={{...style, ...style.line}}
+          />
+          <text {...textProps}
+            className="rv-xy-plot__axis__tick__text"
+            style={{...style, ...style.text}}
+          >
             {text}
           </text>
         </g>
@@ -195,4 +205,3 @@ AxisTicks.propTypes = propTypes;
 AxisTicks.requiresSVG = true;
 
 export default AxisTicks;
-

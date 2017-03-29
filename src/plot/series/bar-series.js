@@ -103,10 +103,10 @@ class BarSeries extends AbstractSeries {
         {data.map((d, i) => {
           const attrs = {
             style: {
-              ...style,
               opacity: opacityFunctor && opacityFunctor(d),
               stroke: strokeFunctor && strokeFunctor(d),
-              fill: fillFunctor && fillFunctor(d)
+              fill: fillFunctor && fillFunctor(d),
+              ...style
             },
             [linePosAttr]: lineFunctor(d) - itemSize +
             (itemSize * 2 / sameTypeTotal * sameTypeIndex),

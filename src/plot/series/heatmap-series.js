@@ -65,10 +65,10 @@ class HeatmapSeries extends AbstractSeries {
         {data.map((d, i) => {
           const attrs = {
             style: {
-              ...style,
               stroke: strokeFunctor && strokeFunctor(d),
               fill: fillFunctor && fillFunctor(d),
-              opacity: opacityFunctor && opacityFunctor(d)
+              opacity: opacityFunctor && opacityFunctor(d),
+              ...style
             },
             x: xFunctor(d) - xDistance / 2,
             y: yFunctor(d) - yDistance / 2,

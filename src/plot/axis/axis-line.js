@@ -26,13 +26,14 @@ const {LEFT, RIGHT, TOP, BOTTOM} = ORIENTATION;
 
 const propTypes = {
   width: React.PropTypes.number.isRequired,
+  style: React.PropTypes.object,
   height: React.PropTypes.number.isRequired,
   orientation: React.PropTypes.oneOf([
     LEFT, RIGHT, TOP, BOTTOM
   ]).isRequired
 };
 
-function AxisLine({orientation, width, height}) {
+function AxisLine({orientation, width, height, style = {}}) {
   let lineProps;
   if (orientation === LEFT) {
     lineProps = {
@@ -64,7 +65,7 @@ function AxisLine({orientation, width, height}) {
     };
   }
   return (
-    <line {...lineProps} className="rv-xy-plot__axis__line"/>
+    <line {...lineProps} className="rv-xy-plot__axis__line" style={style}/>
   );
 }
 
@@ -72,4 +73,3 @@ AxisLine.displayName = 'AxisLine';
 AxisLine.propTypes = propTypes;
 
 export default AxisLine;
-

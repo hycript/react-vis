@@ -47,6 +47,8 @@ const propTypes = {
   left: PropTypes.number,
   title: PropTypes.string,
 
+  style: PropTypes.object,
+
   className: PropTypes.string,
   hideTicks: PropTypes.bool,
   hideLine: PropTypes.bool,
@@ -95,7 +97,7 @@ class Axis extends PureRenderComponent {
       marginBottom,
       marginLeft,
       marginRight,
-      orientation
+      orientation,
     } = this.props;
     if (orientation === BOTTOM) {
       return {
@@ -155,6 +157,7 @@ class Axis extends PureRenderComponent {
       hideTicks,
       left,
       orientation,
+      style = {},
       title,
       top,
       width
@@ -165,17 +168,21 @@ class Axis extends PureRenderComponent {
     return (
       <g
         transform={`translate(${left},${top})`}
-        className={`${predefinedClassName} ${axisClassName} ${className}`}>
+        className={`${predefinedClassName} ${axisClassName} ${className}`}
+        style={style}>
         {!hideLine && (<AxisLine
           height={height}
           width={width}
-          orientation={orientation}/>)}
-        {!hideTicks && (<AxisTicks {...props} />)}
+          orientation={orientation}
+          style={{...style, ...style.line}}
+          />)}
+        {!hideTicks && (<AxisTicks {...props} style={{...style, ...style.ticks}}/>)}
         {title ?
           <AxisTitle
             title={title}
             height={height}
             width={width}
+            style={{...style, ...style.title}}
             orientation={orientation}/> :
           null}
       </g>
