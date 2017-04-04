@@ -53,7 +53,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  className: ''
+  className: '',
+  style: {}
 };
 
 class AbstractSeries extends PureRenderComponent {

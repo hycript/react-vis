@@ -36,6 +36,7 @@ const STROKE_STYLES = {
 
 const defaultProps = {
   strokeStyle: 'solid',
+  style: {},
   opacity: 1,
   curve: null
 };

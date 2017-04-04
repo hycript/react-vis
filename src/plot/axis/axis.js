@@ -73,6 +73,7 @@ const propTypes = {
 
 const defaultProps = {
   className: '',
+  style: {},
   tickSize: 6,
   tickPadding: 8,
   orientation: BOTTOM
@@ -157,7 +158,7 @@ class Axis extends PureRenderComponent {
       hideTicks,
       left,
       orientation,
-      style = {},
+      style,
       title,
       top,
       width

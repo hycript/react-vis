@@ -314,6 +314,7 @@ class XYPlot extends React.Component {
   render() {
     const {
       className,
+      style,
       width,
       height
     } = this.props;
@@ -342,7 +343,7 @@ class XYPlot extends React.Component {
           className="rv-xy-plot__inner"
           width={width}
           height={height}
-          style={this.props.style}
+          style={style}
           onMouseDown={this._mouseDownHandler}
           onMouseMove={this._mouseMoveHandler}
           onMouseLeave={this._mouseLeaveHandler}

@@ -117,7 +117,8 @@ class Hint extends PureRenderComponent {
       align: {
         horizontal: ALIGN.AUTO,
         vertical: ALIGN.AUTO
-      }
+      },
+      style: {}
     };
   }
 
@@ -363,7 +364,7 @@ class Hint extends PureRenderComponent {
       value,
       format,
       children,
-      style = {}
+      style
     } = this.props;
 
     const {position, className} = this._getPositionInfo();

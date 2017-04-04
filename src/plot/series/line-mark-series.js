@@ -31,7 +31,7 @@ class LineMarkSeries extends AbstractSeries {
   }
 
   render() {
-    const {style = {}} = this.props;
+    const {style} = this.props;
     return (
       <g className="rv-xy-plot__series rv-xy-plot__series--linemark">
         <LineSeries {...this.props} style={{...style, ...style.line}}/>

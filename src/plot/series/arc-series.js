@@ -38,7 +38,8 @@ const ATTRIBUTES = ['radius', 'angle'];
 
 const defaultProps = {
   center: {x: 0, y: 0},
-  className: ''
+  className: '',
+  style: {}
 };
 
 class ArcSeries extends AbstractSeries {
@@ -98,7 +99,7 @@ class ArcSeries extends AbstractSeries {
       data,
       marginLeft,
       marginTop,
-      style = {}
+      style
     } = this.props;
 
     if (!data) {

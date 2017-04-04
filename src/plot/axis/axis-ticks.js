@@ -26,12 +26,16 @@ import {getAttributeScale} from 'utils/scales-utils';
 const {LEFT, RIGHT, TOP, BOTTOM} = ORIENTATION;
 
 const propTypes = {
-  width: React.PropTypes.number.isRequired,
   height: React.PropTypes.number.isRequired,
-  style: React.PropTypes.object,
   orientation: React.PropTypes.oneOf([
     LEFT, RIGHT, TOP, BOTTOM
-  ]).isRequired
+  ]).isRequired,
+  style: React.PropTypes.object,
+  width: React.PropTypes.number.isRequired
+};
+
+const defaultProps = {
+  style: {}
 };
 
 function _getTickFormatFn(scale, tickTotal, tickFormat) {
@@ -150,7 +154,7 @@ class AxisTicks extends React.Component {
       orientation,
       width,
       height,
-      style = {},
+      style,
       tickFormat,
       tickTotal,
       tickValues
@@ -200,6 +204,7 @@ class AxisTicks extends React.Component {
   }
 }
 
+AxisTicks.defaultProps = defaultProps;
 AxisTicks.displayName = 'AxisTicks';
 AxisTicks.propTypes = propTypes;
 AxisTicks.requiresSVG = true;

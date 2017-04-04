@@ -25,15 +25,19 @@ import {ORIENTATION} from 'utils/axis-utils';
 const {LEFT, RIGHT, TOP, BOTTOM} = ORIENTATION;
 
 const propTypes = {
-  width: React.PropTypes.number.isRequired,
-  style: React.PropTypes.object,
   height: React.PropTypes.number.isRequired,
+  style: React.PropTypes.object,
   orientation: React.PropTypes.oneOf([
     LEFT, RIGHT, TOP, BOTTOM
-  ]).isRequired
+  ]).isRequired,
+  width: React.PropTypes.number.isRequired
 };
 
-function AxisLine({orientation, width, height, style = {}}) {
+const defaultProps = {
+  style: {}
+};
+
+function AxisLine({orientation, width, height, style}) {
   let lineProps;
   if (orientation === LEFT) {
     lineProps = {
@@ -69,6 +73,7 @@ function AxisLine({orientation, width, height, style = {}}) {
   );
 }
 
+AxisLine.defaultProps = defaultProps;
 AxisLine.displayName = 'AxisLine';
 AxisLine.propTypes = propTypes;
 
