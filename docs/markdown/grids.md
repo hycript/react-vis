@@ -78,3 +78,7 @@ The left-right value in coordinates of where the circles should be centered.
 #### centerY (optional)
 Type: `number`  
 The top-bottom value in coordinates of where the circles should be centered.
+
+#### style (optional)
+Type: `object`
+An CSS object that will style these gridlines. 
