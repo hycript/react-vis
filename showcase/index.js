@@ -20,6 +20,7 @@
 
 import ComplexChart from './plot/complex-chart';
 import LineChart from './plot/line-chart';
+import LineChartWithStyle from './plot/line-chart-with-style';
 import LineMarkChart from './plot/linemark-chart';
 import BarChart from './plot/bar-chart';
 import StackedVerticalBarChart from './plot/stacked-vertical-bar-chart';
@@ -75,6 +76,7 @@ import ContinuousSizeLegendExample from './legends/continuous-size';
 export const showCase = {
   ComplexChart,
   LineChart,
+  LineChartWithStyle,
   LineMarkChart,
   BarChart,
   StackedVerticalBarChart,

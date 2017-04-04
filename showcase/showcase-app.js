@@ -4,6 +4,7 @@ import {showCase} from './index';
 const {
   ComplexChart,
   LineChart,
+  LineChartWithStyle,
   LineMarkChart,
   BarChart,
   StackedVerticalBarChart,
@@ -84,6 +85,10 @@ class App extends Component {
           <section>
             <h3>Line Series</h3>
             <LineChart />
+          </section>
+            <section>
+            <h3>Line Series With Styles</h3>
+            <LineChartWithStyle />
           </section>
           <section>
             <h3>LineMark Series</h3>

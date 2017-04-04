@@ -32,13 +32,9 @@ const DEFAULT_STROKE_WIDTH = 1;
 class MarkSeries extends AbstractSeries {
 
   render() {
-<<<<<<< e606c0c068643620d0049e6b662171bba69ef639
-    const {animation, className, data, marginLeft, marginTop, strokeWidth} = this.props;
-=======
     const {
-      animation, className, data, marginLeft, marginTop, style
+      animation, className, data, marginLeft, marginTop, strokeWidth, style
     } = this.props;
->>>>>>> adding a style property
     if (!data) {
       return null;
     }
@@ -72,11 +68,8 @@ class MarkSeries extends AbstractSeries {
               opacity: opacityFunctor ? opacityFunctor(d) : DEFAULT_OPACITY,
               stroke: strokeFunctor && strokeFunctor(d),
               fill: fillFunctor && fillFunctor(d),
-<<<<<<< 21ed372442181336e3c0a3a77db782c3995c9c9e
-              strokeWidth: strokeWidth || DEFAULT_STROKE_WIDTH
-=======
+              strokeWidth: strokeWidth || DEFAULT_STROKE_WIDTH,
               ...style
->>>>>>> add style for composite components (ie hint, axes)
             },
             key: i,
             onClick: e => this._valueClickHandler(d, e),
