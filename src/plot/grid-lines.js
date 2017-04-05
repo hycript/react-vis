@@ -141,7 +141,7 @@ class GridLines extends PureRenderComponent {
             <line
               {...pathProps}
               key={i}
-              className="rv-xy-plot__grid-lines__line" 
+              className="rv-xy-plot__grid-lines__line"
               style={style} />
           );
         })}

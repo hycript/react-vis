@@ -101,7 +101,6 @@ class LineSeries extends AbstractSeries {
         style={{
           opacity,
           strokeDasharray: STROKE_STYLES[strokeStyle] || strokeDasharray,
-          opacity,
           strokeWidth,
           stroke,
           ...style

@@ -98,7 +98,7 @@ class Axis extends PureRenderComponent {
       marginBottom,
       marginLeft,
       marginRight,
-      orientation,
+      orientation
     } = this.props;
     if (orientation === BOTTOM) {
       return {
