@@ -106,6 +106,13 @@ export const docPages = generatePath([
         filename: 'animation.md',
         pageType: 'documentation'
       }
+    }, {
+      name: 'Style',
+      content {
+        markdown: getDocUrl('style.md'),
+        filename: 'animation.md',
+        pageType: 'documentation'
+      }
     }]
   },
   {
@@ -192,6 +199,14 @@ export const docPages = generatePath([
         content: {
           markdown: getDocUrl('mark-series.md'),
           filename: 'mark-series.md',
+          pageType: 'documentation'
+        }
+      },
+      {
+        name: 'Line-Mark Series',
+        content: {
+          markdown: getDocUrl('line-mark-series.md'),
+          filename: 'line-mark-series.md',
           pageType: 'documentation'
         }
       }, {

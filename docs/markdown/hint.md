@@ -14,7 +14,7 @@ In case if custom representation of is needed, the component is also able to wra
 
 ### Style (optional)
 Type: `Object`
-You can pass a style object to your Hint component to apply your own styles. 
+You can pass a style object to your Hint component to apply your own styles. See [style](style.md)
 ```jsx
 <Hint value={value} style={{fontSize: 14}}/>
 ```
@@ -24,10 +24,10 @@ The different parts are: content, row, title, value. To style a specific part, y
 ```jsx
 <Hint value={value} style={{
   fontSize: 14,
-  .text: {
+  text: {
     display: 'none'
   },
-  .value {
+  value {
     color: 'red'
   }
 }}/>

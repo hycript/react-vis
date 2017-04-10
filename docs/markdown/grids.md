@@ -81,4 +81,5 @@ The top-bottom value in coordinates of where the circles should be centered.
 
 #### style (optional)
 Type: `object`
-An CSS object that will style these gridlines. 
+An CSS object that will style these gridlines. See [style](style.md)
+

@@ -46,7 +46,8 @@ const funcCurveProp = <LineSeries data={data} curve={configuredCurve} .../>;
 
 #### style (optional)
 Type: `object`
-An object which holds CSS properties that will be applied to the SVG element(s) rendered by the series. This allows you to style series beyond the other explicitly defined properties and without having to use CSS classnames and stylesheets.
+An object which holds CSS properties that will be applied to the SVG element(s) rendered by the series. This allows you to style series beyond the other explicitly defined properties and without having to use CSS classnames and stylesheets. See [style](style.md)
+
 ```jsx
 <LineSeries
   data={data}
